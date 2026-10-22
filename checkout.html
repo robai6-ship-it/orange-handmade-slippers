@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Mukta:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Place your order · Orange Handmade Slippers</title>
+  <meta name="robots" content="noindex">
+</head>
+<body data-page="checkout">
+  <div id="site-header"></div>
+  <main id="main">
+    <section class="page-hero" style="padding-bottom:28px">
+      <div class="wrap">
+        <div class="crumbs"><a href="index.html">Home</a> / <a href="shop.html">Shop</a> / Place order</div>
+        <h1>Place your order</h1>
+        <p class="lead">No online payment needed. Fill in your delivery details and send the order to us on WhatsApp. We'll confirm your size, the delivery charge and payment with you directly.</p>
+      </div>
+    </section>
+    <div class="wrap checkout" id="checkout">
+      <div id="checkout-form-wrap">
+        <form class="panel" id="checkout-form" novalidate>
+          <h2 style="font-size:26px;margin-bottom:20px">Delivery details</h2>
+          <div class="form-grid">
+            <div class="field full"><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required><div class="err">Please enter your name.</div></div>
+            <div class="field"><label for="f-phone">Mobile number</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="98XXXXXXXX" required><div class="err">Please enter a mobile number we can reach.</div></div>
+            <div class="field"><label for="f-district">District</label>
+              <select id="f-district" name="district" required data-districts>
+                <option value="">Choose district</option>
+              </select><div class="err">Please choose your district.</div></div>
+            <div class="field"><label for="f-city">City / municipality</label><input id="f-city" name="city" autocomplete="address-level2" placeholder="e.g. Pokhara" required><div class="err">Please enter your city.</div></div>
+            <div class="field"><label for="f-address">Ward, tole and street</label><input id="f-address" name="address" autocomplete="street-address" placeholder="e.g. Ward 6, Lakeside" required><div class="err">Please enter your address.</div></div>
+            <div class="field full"><label for="f-landmark">Nearby landmark <span class="opt-tag">(optional)</span></label><input id="f-landmark" name="landmark" placeholder="e.g. opposite the school"></div>
+            <div class="field full"><label>Best way to reach you</label>
+              <div class="radio-cards">
+                <label><input type="radio" name="contact" value="WhatsApp" checked> WhatsApp</label>
+                <label><input type="radio" name="contact" value="Viber"> Viber</label>
+                <label><input type="radio" name="contact" value="Phone call"> Phone call</label>
+              </div>
+            </div>
+            <div class="field full"><label for="f-notes">Notes <span class="opt-tag">(optional)</span></label><textarea id="f-notes" name="notes" placeholder="Foot length for a custom fit, a gift message, needed by a wedding date..."></textarea></div>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit" style="margin-top:22px">Continue to send order</button>
+          <p class="small-note" style="margin:12px 0 0;text-align:center">Your details are only used to deliver your order.</p>
+        </form>
+      </div>
+      <aside class="summary" id="checkout-aside">
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:baseline"><h2 style="font-size:24px">Your order</h2><span id="sum-count" style="color:var(--ink-soft);font-size:14px"></span></div>
+          <div id="summary-lines"></div>
+          <div style="padding-top:12px">
+            <div class="sum-row"><span>Subtotal</span><span id="sum-subtotal"></span></div>
+            <div class="sum-row"><span>Delivery</span><span style="color:var(--ink-soft)">Confirmed in chat</span></div>
+            <div class="sum-row total"><span>Total before delivery</span><span id="sum-total"></span></div>
+          </div>
+        </div>
+        <div class="panel" style="margin-top:16px">
+          <h3 style="font-family:var(--body);font-size:16px;font-weight:700;margin-bottom:14px">What happens next</h3>
+          <ol class="how-list">
+            <li>You send the order to us on WhatsApp (one tap after this form).</li>
+            <li>We reply to confirm your size, colour, delivery charge and how you'd like to pay.</li>
+            <li>We make or pack your pair and send it through our courier partner.</li>
+          </ol>
+          <div class="note-box" style="margin-bottom:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><div>Handmade pairs can't be returned or exchanged, so please check the <a href="size-guide.html">size guide</a>.</div></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
