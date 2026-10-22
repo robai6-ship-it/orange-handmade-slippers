@@ -49,3 +49,13 @@ Then open http://localhost:4174
 ## Putting it online (free options)
 
 Any static host works: Cloudflare Pages, Netlify or Vercel. Drag the folder in, or connect a GitHub repo.
+
+## English / नेपाली
+
+The site has an English / नेपाली switch in the header (and in the phone menu and footer). The choice is remembered on each visitor's device. To share a link that opens in Nepali, add `?lang=ne`, e.g. `https://orange-handmade-slippers.vercel.app/?lang=ne`.
+
+- **Page text:** each English element carries its Nepali version right beside it in a `data-ne="..."` attribute in the `.html` files. Edit the Nepali there.
+- **Products:** each product in `js/products.js` has an `ne` block (name, description, details, tag), and each colour has an `ne` name.
+- **Header, footer, bag, checkout, WhatsApp messages:** written in `js/app.js` as `t("English", "नेपाली")`.
+- **Fonts:** Nepali uses Mukta for reading text and Tiro Devanagari Hindi for headings (Google Fonts).
+- Orders placed in Nepali reach WhatsApp in Nepali, with the English product name in brackets.

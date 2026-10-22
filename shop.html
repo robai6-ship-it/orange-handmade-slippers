@@ -6,9 +6,10 @@
   <link rel="icon" href="images/logo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Mukta:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Mukta:wght@400;500;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <title>Shop slippers · Orange Handmade Slippers</title>
+  <script>try{var l=new URLSearchParams(location.search).get("lang")||localStorage.getItem("ohs-lang");if(l==="ne")document.documentElement.lang="ne"}catch(e){}</script>
+  <title data-ne="चप्पल किन्नुहोस् · अरेन्ज ह्यान्डमेड स्लिपर्स">Shop slippers · Orange Handmade Slippers</title>
   <meta name="description" content="Shop handmade velvet, zari and everyday slippers from Nepal. Wedding, festive, everyday and kids' pairs. Delivery all over Nepal.">
 </head>
 <body data-page="shop">
@@ -16,7 +17,7 @@
   <main id="main">
     <section class="page-hero">
       <div class="wrap">
-        <div class="crumbs"><a href="index.html">Home</a> / Shop</div>
+        <div class="crumbs" data-ne="<a href=&quot;index.html&quot;>गृहपृष्ठ</a> / पसल"><a href="index.html">Home</a> / Shop</div>
         <h1 id="shop-title">All slippers</h1>
         <p class="lead" id="shop-blurb"></p>
       </div>
@@ -24,18 +25,18 @@
     <section class="wrap" style="padding-bottom:80px">
       <div class="shop-bar">
         <div class="chips" role="group" aria-label="Filter by type">
-          <button class="chip" type="button" data-cat="all">All</button>
-          <button class="chip" type="button" data-cat="festive">Wedding & festive</button>
-          <button class="chip" type="button" data-cat="everyday">Everyday</button>
-          <button class="chip" type="button" data-cat="kids">Kids</button>
+          <button class="chip" type="button" data-cat="all" data-ne="सबै">All</button>
+          <button class="chip" type="button" data-cat="festive" data-ne="बिहे र चाडपर्व">Wedding & festive</button>
+          <button class="chip" type="button" data-cat="everyday" data-ne="दैनिक">Everyday</button>
+          <button class="chip" type="button" data-cat="kids" data-ne="बालबालिका">Kids</button>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
           <span id="shop-count" style="font-size:14px;color:var(--ink-soft)"></span>
-          <input class="search-input" id="shop-search" type="search" placeholder="Search slippers" aria-label="Search slippers">
+          <input class="search-input" id="shop-search" type="search" placeholder="Search slippers" data-ne-ph="चप्पल खोज्नुहोस्" aria-label="Search slippers">
           <select class="select" id="shop-sort" aria-label="Sort">
-            <option value="featured">Featured</option>
-            <option value="low">Price: low to high</option>
-            <option value="high">Price: high to low</option>
+            <option value="featured" data-ne="छानिएका">Featured</option>
+            <option value="low" data-ne="मूल्य: कमदेखि बढी">Price: low to high</option>
+            <option value="high" data-ne="मूल्य: बढीदेखि कम">Price: high to low</option>
           </select>
         </div>
       </div>
@@ -43,10 +44,10 @@
 
       <div class="panel" style="margin-top:64px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
         <div>
-          <h2 style="font-size:28px">Don't see the design you want?</h2>
-          <p style="margin:8px 0 0;color:var(--ink-soft)">We make new designs every season and take custom orders. Send us a photo and your size.</p>
+          <h2 style="font-size:28px" data-ne="चाहेको डिजाइन देख्नुभएन?">Don't see the design you want?</h2>
+          <p style="margin:8px 0 0;color:var(--ink-soft)" data-ne="हामी हरेक सिजन नयाँ डिजाइन बनाउँछौं र अर्डरअनुसार पनि बनाउँछौं। फोटो र साइज पठाउनुहोस्।">We make new designs every season and take custom orders. Send us a photo and your size.</p>
         </div>
-        <a class="btn btn-wa" href="#" data-wa="Namaste! I'd like a custom pair. Here's the design and my size: ">Send us a design</a>
+        <a class="btn btn-wa" href="#" data-wa="Namaste! I'd like a custom pair. Here's the design and my size: " data-ne-wa="नमस्ते! मलाई अर्डरअनुसारको चप्पल चाहियो। डिजाइन र मेरो साइज यस्तो छ: " data-ne="डिजाइन पठाउनुहोस्">Send us a design</a>
       </div>
     </section>
   </main>

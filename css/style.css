@@ -490,3 +490,51 @@ table.sizes-table { width: 100%; border-collapse: collapse; background: var(--pa
   .search-input { min-width: 0; width: 100%; }
   .page-hero { padding: 32px 0 24px; }
 }
+
+/* ---------- Language switch ---------- */
+.lang-btn {
+  display: inline-flex; align-items: center; gap: 6px; height: 38px; padding: 0 13px; margin-right: 4px;
+  border-radius: 999px; border: 1.5px solid var(--line); background: var(--paper); font-weight: 600; font-size: 14px; white-space: nowrap;
+}
+.lang-btn:hover { border-color: var(--ink); }
+.lang-btn svg { width: 16px; height: 16px; flex: none; color: var(--orange-deep); }
+.lang-btn[lang="ne"] span { font-family: var(--deva); font-size: 15.5px; line-height: 1; }
+.lang-btn[lang="en"] span { font-family: var(--body); }
+.lang-btn-lg { height: 46px; padding: 0 18px; font-size: 16px; margin-bottom: 18px; }
+.footer .lang-btn { background: transparent; color: #d9d3c7; border-color: rgba(255, 255, 255, .22); }
+.footer .lang-btn:hover { border-color: var(--orange); color: #fff; }
+@media (max-width: 520px) {
+  .hide-sm { display: none; }
+  .lang-btn { height: 36px; padding: 0 10px; margin-right: 0; }
+  .header-actions { gap: 2px; }
+}
+
+/* ---------- Nepali (Devanagari) typography ----------
+   Mukta for reading text, Tiro Devanagari Hindi for headings.
+   Devanagari needs no letter-spacing, no capitals, no fake italics, and taller lines. */
+:root { --deva-display: "Tiro Devanagari Hindi", "Mukta", serif; }
+html[lang="ne"]:not(.i18n-ready) main { visibility: hidden; }
+html[lang="ne"] body { font-family: var(--deva); font-size: 17px; line-height: 1.75; }
+html[lang="ne"] h1, html[lang="ne"] h2, html[lang="ne"] h3, html[lang="ne"] .quote,
+html[lang="ne"] .brand-name, html[lang="ne"] .hero-meta strong, html[lang="ne"] .stat strong,
+html[lang="ne"] .step::before, html[lang="ne"] .mobile-menu nav a {
+  font-family: var(--deva-display); letter-spacing: 0; line-height: 1.32;
+}
+html[lang="ne"] h1 { font-size: clamp(36px, 5.6vw, 66px); }
+html[lang="ne"] .page-hero h1 { font-size: clamp(34px, 4.8vw, 58px); }
+html[lang="ne"] em, html[lang="ne"] i, html[lang="ne"] .quote { font-style: normal; }
+html[lang="ne"] .eyebrow, html[lang="ne"] .featured-label, html[lang="ne"] .footer h4,
+html[lang="ne"] .sizes-table th, html[lang="ne"] .brand-name small, html[lang="ne"] .t-item .when,
+html[lang="ne"] .tag, html[lang="ne"] .btn { letter-spacing: 0; text-transform: none; }
+html[lang="ne"] .eyebrow { font-size: 15px; }
+html[lang="ne"] .brand-name small { font-family: var(--deva); font-size: 12px; font-weight: 600; margin-top: 2px; }
+html[lang="ne"] .card-body h3, html[lang="ne"] .value h3, html[lang="ne"] .line-item h4,
+html[lang="ne"] .how-list, html[lang="ne"] .press-card h3.deva { font-family: var(--deva); font-weight: 600; }
+html[lang="ne"] .card-body h3 { font-size: 17px; line-height: 1.4; }
+html[lang="ne"] .btn { font-size: 16px; }
+html[lang="ne"] .quote .deva { display: none; } /* the Nepali quote is already the main text */
+@media (max-width: 520px) {
+  html[lang="ne"] .brand-name { font-size: 21px; }
+  html[lang="ne"] .brand-name small { font-size: 11px; }
+}
+html[lang="ne"] { --display: "Tiro Devanagari Hindi", "Fraunces", Georgia, serif; --body: "Mukta", "DM Sans", system-ui, sans-serif; }
